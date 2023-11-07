@@ -3,8 +3,8 @@
 <head>
 
 <title>Formulário de Cadastro</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="<script src="jquery-3.7.1.min.js"></script>></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 <body>
 
@@ -18,7 +18,7 @@
 
 <input type="email" id="email" name="email" required><br>
 <label for="telefone">Telefone:</label>
-    <input type="tel" id="telefone" name="telefone" required><br>
+    <input type="tel" id="phone_with_ddd" name="phone" required><br>
 <label for="cpf">CPF:</label>
 
 <input type="text" id="cpf" name="cpf" required><br>
@@ -27,23 +27,18 @@
 <label for="cep">CEP:</label>
     
     
-<input type="text" id="cep" name="cep" required><br>
-
+    <input type="text" id="cep" name="cep" required><br>
     <button type="submit">Cadastrar</button>
-
 </form>
 </form>
-
-<script>
-    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>
     $(document).ready(function () {
-        $('#telefone').mask('(00) 0000
-    $(document).ready(function () {
-        $('#telefone').mask('(00) 000
-    $(document).ready(function () {
-        $('#telefone').mask('(00) 0000-0000');
-        $('#cpf').mask('000.000.000-00');
+        $('#phone_with_ddd').mask('(00) 0000-0000');
         $('#cep').mask('00000-000');
+        $('#cpf').mask('000.000.000-00', {reverse: true})
+        
     });
 </script>
 </body>
